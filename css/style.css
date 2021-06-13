@@ -138,6 +138,19 @@ body.opened {
     top: 0;
     left: 0;
     z-index: 10;
+    transform-origin: top;
+}
+
+@keyframes fix-nav {
+    0% {
+        transform: scaleY(0);
+        position: fixed;
+    }
+
+    100% {
+        transform: scaleY(1);
+        position: fixed;
+    }
 }
 
 .logo-container {
@@ -325,7 +338,7 @@ body.opened {
 
 .cta-section {
     width: 100%;
-    min-height: 25vh;
+    min-height: 35vh;
     background-color: #333;
     padding: 1em;
     display: flex;
@@ -340,7 +353,7 @@ body.opened {
 }
 
 .cta-btn {
-    padding: 0.7em 1em;
+    padding: 0.5em 1.35em;
     border: none;
     background: white;
     text-transform: uppercase;
@@ -348,6 +361,7 @@ body.opened {
     position: relative;
     z-index: 1;
     transition: all 750ms ease-in-out;
+    font-size: 1.2rem;
 }
 
 .cta-btn:hover {

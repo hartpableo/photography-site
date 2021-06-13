@@ -27,9 +27,9 @@ window.addEventListener('scroll',function() {
     const scrollHeight = window.pageYOffset;
 
     if (scrollHeight > headerHeight) {
-        header.style.position = `fixed`;
+        header.style.animation = `fix-nav 750ms ease-in-out forwards`;
     } else if (scrollHeight <= headerHeight) {
-        header.style.position = `absolute`;
+        header.style.animation = `none`;
     };
 });
 
